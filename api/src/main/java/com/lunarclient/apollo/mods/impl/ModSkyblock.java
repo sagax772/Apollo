@@ -160,17 +160,6 @@ public final class ModSkyblock {
         .build();
 
     /**
-     * Changes crop hitboxes with their 1.12+ variant. Only enabled on Hypixel or singleplayer.
-     *
-     * @since 1.0.9
-     */
-    public static final SimpleOption<Boolean> TALLER_CROPS = SimpleOption.<Boolean>builder()
-        .comment("Changes crop hitboxes with their 1.12+ variant. Only enabled on Hypixel or singleplayer.")
-        .node("skyblock", "taller-crops").type(TypeToken.get(Boolean.class))
-        .notifyClient()
-        .build();
-
-    /**
      * Fixes your fishing bobber sinking in lava.
      *
      * @since 1.0.9
@@ -275,6 +264,18 @@ public final class ModSkyblock {
      */
     public static final SimpleOption<Boolean> SHOW_KUUDRA_HEALTH = SimpleOption.<Boolean>builder()
         .node("skyblock", "show-kuudra-health").type(TypeToken.get(Boolean.class))
+        .notifyClient()
+        .build();
+
+    /**
+     * Changes crop hitboxes with their 1.12+ variant. Only enabled on Hypixel or singleplayer.
+     *
+     * @since 1.0.9
+     */
+    @Deprecated
+    public static final SimpleOption<Boolean> TALLER_CROPS = SimpleOption.<Boolean>builder()
+        .comment("Changes crop hitboxes with their 1.12+ variant. Only enabled on Hypixel or singleplayer.")
+        .node("skyblock", "taller-crops").type(TypeToken.get(Boolean.class))
         .notifyClient()
         .build();
 
